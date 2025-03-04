@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section class="bg-black d-flex justify-content-center align-items-center flex-column gap-4 p-4 rounded-4">
+        <h1 class="text-center">Update Employee Data</h1>
+        <p class="h3 fw-light text-secondary">Edit the fields of employee: <span class="text-info fw-medium">{{emp_id.name}}</span> and click the Update button to update the employee data</p>
+
+        <section class="container p-3">
+            <form class="form-control bg-dark text-light text-center py-5 " method="POST">
+                {% csrf_token %}
+                <div class="row justify-content-center align-content-center">
+                    <h2 class="col-5 bg-black rounded-3 d-flex align-items-center justify-content-center">Name</h2>
+                    <h1 class="col-1">:</h1>
+                    <span class="col-5 py-2">{{form.name}}</span>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <h2 class="col-5 bg-black rounded-3 d-flex align-items-center justify-content-center py-3">Age</h2>
+                    <h1 class="col-1">:</h1>
+                    <span class="col-5 py-2">{{form.age}}</span>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <h2 class="col-5 bg-black rounded-3 d-flex align-items-center justify-content-center py-3">City</h2>
+                    <h1 class="col-1">:</h1>
+                    <span class="col-5 py-2">{{form.city}}</span>
+                </div>
+                <div class="pt-5">
+                <a class="btn btn-danger fs-4 mx-3 px-4" href="{% url 'list' %}">Cancel</a>
+                <button class="btn btn-primary fs-4 mx-2 px-4" type="submit">Update</button>
+                </div>
+            </form>
+        </section>
+    </section>
+{% endblock %}

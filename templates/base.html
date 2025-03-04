@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script defer src="{% static 'js/bootstrap.bundle.min.css' %}"></script>
+    <style>
+        .ph-clr::placeholder{
+        color:#aaaaaa;
+        }
+    </style>
+</head>
+<body class="p-5 bg-dark text-light">
+    {% block content %}
+
+
+<!--    <section class="bg-black d-flex justify-content-center align-items-center flex-column gap-5 p-5 rounded-4">-->
+<!--        <h1 class="text-center">Create Employee Data</h1>-->
+<!--        <p class="h3 w-75 text-center fw-light text-secondary">Enter the details of an Employee and click the Create button to add an Employee.</p>-->
+
+<!--        <section class="container">-->
+<!--            <form class="form-control bg-dark text-light text-center py-5 " method="POST">-->
+<!--                {% csrf_token %}-->
+<!--                <div class="row justify-content-center align-content-center">-->
+<!--                    <h2 class="col-4 bg-black rounded-3 py-2">Name</h2>-->
+<!--                    <h2 class="col-1">:</h2>-->
+<!--                    <h2 class="col-6 py-2">{{form.name}}</h2>-->
+<!--                </div>-->
+<!--                <div class="row justify-content-center align-items-center">-->
+<!--                    <h2 class="col-4 bg-black rounded-3 py-2">Age</h2>-->
+<!--                    <h2 class="col-1">:</h2>-->
+<!--                    <h2 class="col-6 py-2">{{form.age}}</h2>-->
+<!--                </div>-->
+<!--                <div class="row justify-content-center align-items-center">-->
+<!--                    <h2 class="col-4 bg-black rounded-3 py-2">City</h2>-->
+<!--                    <h2 class="col-1">:</h2>-->
+<!--                    <h2 class="col-6 py-2">{{form.city}}</h2>-->
+<!--                </div>-->
+<!--                <div class="pt-5">-->
+<!--                <a class="btn btn-secondary fs-4" href="{% url 'list' %}">back</a>-->
+<!--                <button class="btn btn-success fs-4" type="submit">Create</button>-->
+<!--                </div>-->
+<!--            </form>-->
+<!--        </section>-->
+
+<!--    </section>-->
+    {% endblock %}
+</body>
+</html>

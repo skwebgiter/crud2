@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section class="bg-black d-flex justify-content-center align-items-center flex-column gap-4 p-4 rounded-4">
+        <h1 class="text-center">Create Employee Data</h1>
+        <p class="h3 w-75 text-center fw-light text-secondary">Enter the details of an Employee and click the Create button to add an Employee.</p>
+
+        <section class="container pb-4">
+            <form class="form-control bg-dark text-light text-center py-5 " method="POST">
+                {% csrf_token %}
+                <div class="row justify-content-center align-content-center">
+                    <h2 class="col-5 bg-black rounded-3 d-flex align-items-center justify-content-center p-3 my-auto">Name</h2>
+                    <h1 class="col-1 d-flex align-items-center justify-content-center">:</h1>
+                    <span class="col-5 py-2">{{form.name}}</span>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <h2 class="col-5 bg-black rounded-3 d-flex align-items-center justify-content-center p-3 my-auto">Age</h2>
+                    <h1 class="col-1 d-flex align-items-center justify-content-center">:</h1>
+                    <span class="col-5 py-2">{{form.age}}</span>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <h2 class="col-5 bg-black rounded-3 d-flex align-items-center justify-content-center p-3 my-auto">City</h2>
+                    <h1 class="col-1 d-flex align-items-center justify-content-center">:</h1>
+                    <span class="col-5 py-2">{{form.city}}</span>
+                </div>
+                <div class="pt-5">
+                <a class="btn btn-danger fs-4 mx-3 px-4" href="{% url 'list' %}">Cancel</a>
+                <button class="btn btn-success fs-4 mx-2 px-4" type="submit">Create</button>
+                </div>
+            </form>
+        </section>
+    </section>
+{% endblock %}
